@@ -9,6 +9,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from typing import List, Tuple
 
+# --------------------------------------------------
+#                      Problem 2
+# --------------------------------------------------
 
 def compute_divided_diff_array(data: List[Tuple[float, float]]) -> List[float]:
     '''
