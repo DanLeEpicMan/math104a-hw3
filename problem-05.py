@@ -72,13 +72,11 @@ class NaturalSplineInterpolation:
         # note: this abuses the lower triangular property
         z[n-1] = k[n-1]/m[n-1]
         for j in range(n-2, 0, -1): # n-2, ..., 1
-            print(j)
             z[j] = (k[j] - h[j] * z[j+1])/m[j]
 
         # FINALLY, compute a, b, c, d coefficients
         a, b, c, d = {}, {}, {}, {}
 
-        print('z: ', z, 'h: ',  h)
         for j in range(n):
             a[j] = (z[j+1] - z[j]) / (6 * h[j])
             b[j] = z[j]/2
